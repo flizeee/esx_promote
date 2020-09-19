@@ -24,8 +24,11 @@ Citizen.CreateThread(function()
                     }, '[E] 升職')
                 end
             end
-
-            cZone = (distance < 2) and zone or false
+            
+            if distance < 2 then
+                cZone = zone
+                break
+            end
         end
 
         if cZone then
